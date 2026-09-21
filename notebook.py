@@ -27,21 +27,26 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ## Case 1 : no implementation
+    ## Case 2 : first implementation
     """)
     return
 
 
 @app.function
-def fibo_v1(n):
-    pass
+def fibonacci(n):
+    if n==0 :
+        return 0
+    elif n==1 :
+        return 1
+    else :
+        return fibonacci(n-1)+fibonacci(n-2)
 
 
 @app.cell
 def _():
-    assert fibo_v1(0)==0
-    assert fibo_v1(1)==1
-    assert fibo_v1(2)==1 
+    assert fibonacci(0)==0
+    assert fibonacci(1)==1
+    assert fibonacci(2)==1 
     return
 
 
