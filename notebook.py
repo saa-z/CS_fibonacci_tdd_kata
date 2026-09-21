@@ -37,5 +37,13 @@ def fibo_v1(n):
     pass
 
 
+@app.cell
+def _():
+    assert fibo_v1(0)==0
+    assert fibo_v1(1)==1
+    assert fibo_v1(2)==1 
+    return
+
+
 if __name__ == "__main__":
     app.run()
