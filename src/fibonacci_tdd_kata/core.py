@@ -1,7 +1,7 @@
 # production code of fizzbuzz function
-fibo_values = {}
+fibo_values: dict[int, int] = {}
 
-def fibonacci_opti(n:int) -> int:
+def fibonacci_opti(n: int) -> int:
     if not isinstance(n, int) or n < 0:
         raise ValueError("Fibonacci excepts a positive integer")
 
@@ -9,8 +9,7 @@ def fibonacci_opti(n:int) -> int:
         return fibo_values[n]
 
     elif n > 1:
-        fibo_values[n] = fibonacci_opti(n-1) + fibonacci_opti(n-2)
+        fibo_values[n] = fibonacci_opti(n - 1) + fibonacci_opti(n - 2)
         return fibo_values[n]
-    else :
+    else:
         return n
-
