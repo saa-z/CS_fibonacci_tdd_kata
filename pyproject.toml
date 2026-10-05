@@ -18,11 +18,13 @@ build-backend = "uv_build"
 module-name = "fibonacci_tdd_kata"
 
 [project.scripts]
-fibonacci-tdd-kata = "fibonacci_tdd_kata:main"
+fibonacci-tdd-kata = "fibonacci_tdd_kata.cli:main"
 
 [dependency-groups]
 dev = [
     "marimo>=0.24.2",
+    "matplotlib>=3.11.2",
+    "mypy>=2.4.0",
     "pytest>=9.1.1",
     "pytest-cov>=7.1.0",
     "ruff>=0.16.8",
